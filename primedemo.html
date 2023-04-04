@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeBackground()
+        {
+           document.getElementById("body").style.backgroundColor='orange';
+        }
+        function changecolor()
+        {
+            document.getElementById("txtnum1").style.backgroundColor='green';
+        }
+        function removecolor()
+        {
+            document.getElementById("txtnum1").style.backgroundColor='';
+        }
+      function checkprime()
+      {
+        var num = parseInt(document.getElementById("txtnum1").value);
+        var c=0;
+        var s="";
+        for(var i=1;i<=num;i++)
+        {
+              if(num%i==0)
+              {
+                c++;
+              }
+        }
+        if(c==2)
+        {
+            s= 'prime';
+        }
+        else
+        {
+            s='not prime';
+        }
+      document.getElementById("result").innerHTML=s;
+      }
+
+   function changeButtonColor()
+   {
+    document.getElementById("btn").style.backgroundColor='green';
+   }
+   function removeButtonColor()
+   {
+    document.getElementById("btn").style.backgroundColor='';
+   }
+    </script>
+</head>
+<body onload="changeBackground()" id="body">
+      <input type="text" id="txtnum1" placeholder="Enter Number" onfocus="changecolor()" onblur="removecolor()" />
+      <br><br>
+      <input type="button" value="Prime" id="btn" onclick="checkprime()" onmouseover="changeButtonColor()" onmouseout="removeButtonColor()" />
+      <div id="result">
+
+      </div>
+</body>
+</html>
