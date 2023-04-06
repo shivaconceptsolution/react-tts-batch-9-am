@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun()
+        {
+            var course = document.getElementById("course");
+            var s ="";
+            var max=0;
+            for(var i=0;i<course.length;i++)
+            {
+                 if(course[i].selected)
+                 {
+                    if(max<course[i].value)
+                    {
+                        max=course[i].value;
+                    }
+                    s = s + course[i].value + " ";
+                 }
+            }
+            document.write(s + "<br>" + "Max Fee is "+max);
+        }
+    </script>
+</head>
+<body>
+    <select multiple id="course">
+        <option value="1200">Basic</option>
+        <option value="2200">C</option>
+        <option value="2300">C++</option>
+        <option value="3500">Java</option>
+        <option value="4500">PHP</option>
+    </select>
+    <br>
+    <input type="button" value="MAX FEE" onclick="fun()"   />
+</body>
+</html>
