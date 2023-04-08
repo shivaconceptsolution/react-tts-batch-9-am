@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var s = "welcome in rrrrrrrrrrrrrr abcd aaaaa bbb cccccc";
+        var arr= s.split(" ");
+        var size=0;
+        var res="";
+      // document.write(arr[0]);
+       for(var i=0;i<arr.length;i++)
+       {
+          var data = arr[i];
+          var data1="";
+          for(var j=data.length-1;j>=0;j--)
+          {
+             data1+=data.charAt(j);
+          }
+          if(data==data1)
+          {
+            if(size<data.length)
+            {
+                size=data.length;
+                res=data;
+            }
+            document.write(data + "<br>");
+          }
+       }
+       document.write("Max pallindrom is " +res);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
